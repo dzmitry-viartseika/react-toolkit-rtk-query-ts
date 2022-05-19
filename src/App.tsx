@@ -4,6 +4,7 @@ import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import userSlice from "./store/reducers/User/UserSlice";
 // import { increments } from "./store/reducers/User/UserSlice";
 import {fetchUsers} from "./store/reducers/User/ActionCreators";
+import PostContainer from './components/Posts/PostContainer';
 
 function App() {
     const { count, users, isLoading, error } = useAppSelector(state => state.userReducer);
@@ -25,6 +26,7 @@ function App() {
                 JSON.stringify(users, null, 2)
             }
             <button onClick={handleClick}>Increment +1</button>
+            <PostContainer />
         </>
     );
 }
