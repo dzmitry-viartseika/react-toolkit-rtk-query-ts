@@ -13,12 +13,12 @@ interface IPostItemProps {
 const PostItem: FC<IPostItemProps> = ({post, remove, update}) => {
     const { id } = post;
     const removeHandler = async (event: React.MouseEvent): Promise<void> => {
-        event.preventDefault();
+        event.stopPropagation();
         await remove(id);
     };
 
     const updateHandler = async (event: React.MouseEvent): Promise<void> => {
-        event.preventDefault();
+        event.stopPropagation();
         const title = prompt();
         const updatedPost = {
             ...post,

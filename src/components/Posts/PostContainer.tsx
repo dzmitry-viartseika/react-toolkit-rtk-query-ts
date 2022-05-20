@@ -6,8 +6,8 @@ import {IPost} from "../../models/Posts/IPost";
 const PostContainer = () => {
     const [limit, setLimit] = useState<number>(100);
     // параметры в запросе если нужно
-    const [ deletePost ] = PostsApi.useDeletePostMutation();
-    const [ updatePost ] = PostsApi.useUpdatePostMutation();
+    const [ deletePost, {} ] = PostsApi.useDeletePostMutation();
+    const [ updatePost, {} ] = PostsApi.useUpdatePostMutation();
     const { data: posts, isLoading, status, refetch } = PostsApi.useFetchAllPostsQuery(limit, {
         // pollingInterval: 1000,
     });
