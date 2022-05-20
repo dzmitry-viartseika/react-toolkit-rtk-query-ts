@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 5,
+      "title": "json-server 5",
+      "body": "typicode"
+    },
+    {
+      "id": 6,
+      "title": "UPDATED TUTLE 6",
+      "body": "typicode"
+    },
+    {
+      "id": 8,
+      "title": "54353453453",
+      "body": "typicode"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
